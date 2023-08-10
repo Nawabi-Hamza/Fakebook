@@ -1,0 +1,89 @@
+/* ===============Left Side=================== */
+.left-side .un-followers .un-follow .left img:hover{
+    transform: scale(110%);
+}
+
+
+.left-side .un-followers .un-follow .btn-group button:hover{
+    background-color: rgb(209, 248, 229);
+    /* color: white !important; */
+    border: 1px solid black !important;
+    outline: 2px solid rgb(209, 248, 229);
+    outline-offset: 1px;
+
+}
+
+.left-side .un-followers .un-follow .btn-group button:active{
+    background-color: rgb(209, 248, 229) !important;
+    color: white !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.left-side .un-followers a:hover{
+    /* transform: scale(110%); */
+    color: rgb(146, 247, 199) !important;
+
+}
+
+/* ===============right Side=================== */
+.right-side .followers .follow .left img:hover{
+    transform: scale(110%);
+}
+
+
+.right-side .followers .follow .btn-group button:hover{
+    background-color: rgb(209, 248, 229);
+    /* color: white !important; */
+    border: 1px solid black !important;
+    outline: 2px solid rgb(209, 248, 229);
+    outline-offset: 1px;
+
+}
+
+.right-side .followers .follow .btn-group button:active{
+    background-color: rgb(209, 248, 229) !important;
+    color: white !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.right-side .followers a:hover{
+    /* transform: scale(110%); */
+    color: rgb(146, 247, 199) !important;
+
+}
+
+
+
+.settings .title{
+    margin-top: 15px;
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.settings .menue .btn-group{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    position: relative;
+    overflow-y: auto;
+}
+.settings .menue .btn-group button{
+    width: 100%;
+    height: 70px;
+    border: none;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    border-radius: 20px;
+    transition: .3s;
+    /* position: absolute; */
+}
+.settings .menue .btn-group button:hover{
+    background-color:  rgb(209, 248, 229);
+    cursor: pointer;
+}
