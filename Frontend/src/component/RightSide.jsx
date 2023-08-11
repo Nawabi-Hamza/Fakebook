@@ -2,24 +2,25 @@ import React from 'react'
 // import "../App.css"
 // import "./rightSide.css";
 import Settings from './Settings';
-import { StyleSheet } from './StyleSheet';
+import { StyleSheet } from './LeftRight';
 import "./Style.css"
 
 export default function RightSide() {
+    let num = 0;
   return (
     <>
-        <div className='right-side'>
+        <div className='right-side'  >
                 <span className='title' style={StyleSheet.title}>Your Friend</span> 
-                    <div className='followers'>
+                    <div className='followers' style={StyleSheet.right}>
                         {folower && folower.map((item)=>(
-                            <div className='follow' style={StyleSheet.un_follow}>
+                            <div className='follow' style={StyleSheet.un_follow} key={num++}>
                                 <div className='left' style={StyleSheet.left}>
                                     
                                 <img src={item.image} alt="none" style={StyleSheet.leftImage} />
                                 <a href="/" style={StyleSheet.link}>
-                                    <h4>
+                                    <h6>
                                         {item.name}
-                                    </h4>
+                                    </h6>
                                 </a>
                                 </div>
                                 <div className="btn-group" >

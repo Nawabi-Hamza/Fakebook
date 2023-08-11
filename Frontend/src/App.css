@@ -14,8 +14,6 @@ body{
   padding: 0px;
   margin: 0px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  background-color: #DFF8EB;
-
 }
 .Main-Themes{
   display: flex;
@@ -24,25 +22,20 @@ body{
 
 /* ================= scroll style ============ */
 ::-webkit-scrollbar{
-  width: 12px;
+  width: 0px;
   /* background-color: red; */
   height: min-content;
-  scrollbar-color: red orange;
-  /* scrollbar-face-color: red; */
+  /* background-color: white; */
 }
 /* ------------Left Side-------------- */
 
 
 
 
-/* ----------------Home---------------- */
-
-
-
 /* ------------Right Side-------------- */
 .right-side{
   width: 27%;
-  height: 93vh;
+  height: 94vh;
   position: sticky;
   right: 0px;
   top: 20px;
@@ -50,25 +43,26 @@ body{
   box-sizing: border-box;
   padding:0px 20px;
   overflow-y: auto;
+  
 }
 .right-side .followers{
   background-color: var(--primary-bg);
   border-radius: var(--border-raduis);  
-  height: 48vh;
+  height: 55vh;
   width: 100%;
   box-sizing: border-box;
   padding: var(--padding-2);
-  margin: 5px auto;
+  margin: 1.2em auto;
   box-shadow: var(--primary-shadow);
   overflow-y: auto;
 }
 .right-side  .menue{
-  background-color: var(--primary-bg);
+  /* background-color: var(--primary-bg); */
   border-radius: var(--border-raduis);
-  /* height: 35vh; */
+  height: auto;
   box-sizing: border-box;
   padding: var(--padding-2);
-  margin: 5px auto;
+  margin: 1.2em auto;
   box-shadow: var(--primary-shadow);
 }
 

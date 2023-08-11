@@ -14,7 +14,7 @@
 }
 
 .left-side .un-followers .un-follow .btn-group button:active{
-    background-color: rgb(209, 248, 229) !important;
+    background-color: inherit !important;
     color: white !important;
     border: none !important;
     outline: none !important;
@@ -42,26 +42,26 @@
 }
 
 .right-side .followers .follow .btn-group button:active{
-    background-color: rgb(209, 248, 229) !important;
+    background-color: inherit !important;
     color: white !important;
     border: none !important;
     outline: none !important;
 }
 
-.right-side .followers a:hover{
-    /* transform: scale(110%); */
+/* .right-side .followers a:hover{
+    transform: scale(110%); 
     color: rgb(146, 247, 199) !important;
 
-}
+} */
 
-
+/* 
 
 .settings .title{
     margin-top: 15px;
-    color: white;
+    color: black;
     font-size: 1em;
     font-weight: 700;
-}
+} */
 
 .settings .menue .btn-group{
     width: 100%;
@@ -69,6 +69,7 @@
     /* background-color: red; */
     position: relative;
     overflow-y: auto;
+    
 }
 .settings .menue .btn-group button{
     width: 100%;
@@ -84,6 +85,14 @@
     /* position: absolute; */
 }
 .settings .menue .btn-group button:hover{
-    background-color:  rgb(209, 248, 229);
+    background-color:  #5eb088;
+    /* color:black !important; */
     cursor: pointer;
 }
+/* #colorblack:hover{
+    color: black !important;
+} */
+/* 
+#SDF{
+    color:#101927a7
+} */

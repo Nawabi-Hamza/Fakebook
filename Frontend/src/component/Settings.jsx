@@ -1,50 +1,59 @@
 
-import React,{ useEffect, useState } from 'react'
+import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { StyleSheet } from './LeftRight'
+import "./Style.css"
+
 export default function Settings() {
-  const [ themes,setThemes ] = useState()
-    useEffect(()=>{
-      if(themes==="dark"){
-        localStorage.setItem("themes","dark")
-      }
-      else{
-        localStorage.setItem("themes","light")
-      }
-    },[themes])
+  const location = useLocation()
+    const url = location.pathname.split('/')[1]
+    function changeThemes(e){
+        if(e==="dark"){
+          localStorage.setItem("themes","dark")
+          window.location.reload()
+        }else{
+          localStorage.setItem("themes","light")
+          window.location.reload()
+        }
+    }
   return (
-    <div className='menue'>
-      <div className="btn-group">
-        <button>Profile</button>
-        <button style={StyleSheet.button}>
-          <select name="themes" style={StyleSheet.select} onChange={(e)=>setThemes(e.target.value)}>
+    <div className='menue' style={StyleSheet.settings}>
+      <div className="btn-group" >
+      <button><Link to={url==="profile" ? "/home":"/profile"} style={StyleSheet.settingLink}>{url==="profile" ? "Home":"Profile"}</Link></button>
+        <button style={StyleSheet.settingButton} >
+          <select name="themes" style={StyleSheet.settingSelect} onChange={(e)=> changeThemes(e.target.value)}>
             <option value="light" style={{backgroundColor:"black",color:"white"}}>Themes</option>
-            <option value="dark" style={StyleSheet.optButton}>Dark</option>
-            <option value="light" style={StyleSheet.optButton}>Light</option>
+            <option value="dark" style={StyleSheet.settingOptButton}>Dark</option>
+            <option value="light" style={StyleSheet.settingOptButton}>Light</option>
           </select>
         </button>
-        <button>Logout</button>
+        <button style={StyleSheet.settingLink}>Logout</button>
       </div>
     </div>
   )
 }
 
-const StyleSheet = {
-    button:{
-        fontSize: "1em",
-        padding: "10px 30px",
-        borderRadius: "20px",
-        cursor: "pointer",
-        border:"1px solid white",
-        color:"black",
-        transition: ".3s",
-    },
-    select:{
-      border:"none" ,
-      outline:"none" ,
-      background:"none",
-      width:"100%",
-    },
-    optButton:{
-      width:"300px",
-      
-    }
-}
+// const StyleSheetInternal = {
+//     button:{
+//         fontSize: "1em",
+//         padding: "10px 30px",
+//         borderRadius: "20px",
+//         cursor: "pointer",
+//         border:"1px solid white",
+//         // color:"black",
+//         transition: ".3s",
+//     },
+//     select:{
+//       border:"none" ,
+//       outline:"none" ,
+//       background:"none",
+//       width:"100%",
+//     },
+//     optButton:{
+//       width:"300px",
+//     },
+//     link:{
+//       textDecoration:"none",
+//       color:'black',
+//     }
+// }

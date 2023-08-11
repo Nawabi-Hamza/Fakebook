@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
 import './App.css';
 import Main from './pages/Main';
 import { BrowserRouter, Routes,Route } from "react-router-dom"
 import Home from './pages/Home';
+import Profile from './pages/Profile';
 
 // ================SetColor If User Didn't Set it====================
 function SetThemes (){
@@ -12,44 +12,42 @@ function SetThemes (){
     }
     return color;
 }
-const color = SetThemes();
+SetThemes();
 
 function App() {
-  // const location = useLocation()
-  // console.log(location)
-  useEffect(()=>{
-    console.log(color)
 
-  },[])
+   const theme = localStorage.getItem("themes")
   return (
-    <div className="App" style={StyleSheet.body}>
+    <div className="App" style={theme==="dark" ?StyleSheet.bodyBlack:StyleSheet.body}>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Main />} >
             <Route path="/" element={<Home />} />
-            
+            <Route path="/home" element={<Home />} />
+            <Route path="/profile" element={<Profile />} />
           </Route>
-         
-            
         </Routes>
       </BrowserRouter>
-      <Main />
+    {/* <Main/> */}
     </div>
   );
 }
-
-
-
 
 const StyleSheet = {
   body:{
     boxSizing: "border-box",
     padding: "20px 40px",
-    backgroundColor: "#DFF8EB",
+    backgroundColor: "#DFF8EB" ,
     fontFamily:" Cambria, Cochin, Georgia, Times, 'Times New Roman', serif",
-    height:"auto"
-    
+    height:"atuo"
+  },
+  bodyBlack:{
+    padding: "20px 40px",
+    backgroundColor:"#010409",
+    height:"auto",
+    color:"white",
   }
+  
 }
 
 export default App;
