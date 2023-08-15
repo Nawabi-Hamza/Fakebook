@@ -22,7 +22,7 @@ export default function Settings() {
       <button><Link to={url==="profile" ? "/home":"/profile"} style={StyleSheet.settingLink}>{url==="profile" ? "Home":"Profile"}</Link></button>
         <button style={StyleSheet.settingButton} >
           <select name="themes" style={StyleSheet.settingSelect} onChange={(e)=> changeThemes(e.target.value)}>
-            <option value="light" style={{backgroundColor:"black",color:"white"}}>Themes</option>
+            <option value="light" style={StyleSheet.settingThemes}>Themes</option>
             <option value="dark" style={StyleSheet.settingOptButton}>Dark</option>
             <option value="light" style={StyleSheet.settingOptButton}>Light</option>
           </select>

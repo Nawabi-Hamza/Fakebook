@@ -10,10 +10,6 @@ function BgColor(){
     if(themes==="light") return "#f8f9fa"
     else return "#0d1117"
 }
-// function BtnColor(){
-//     if(themes==="light") return "#f8f9fa"
-//     else return " black"
-// }
 function BtnBgColor(){
     if(themes==="light") return "rgb(209, 248, 229)"
     else return "#5eb088"
@@ -45,6 +41,10 @@ const StyleSheet = {
         alignItems:"center",
         
     },
+    linkNav:{
+        textDecoration:"none",
+        color:TextColor(),
+    },
     leftImage:{
         height: "3rem",
         width: "3rem",
@@ -67,7 +67,7 @@ const StyleSheet = {
     },
     leftSide_unFollower:{
         boxShadow:shadow,
-        height: "85vh",
+        height: "83vh",
         boxSizing: "border-box",
         padding: "20px",
         marginTop:"20px",
@@ -137,6 +137,35 @@ const StyleSheet = {
     settingLink:{
       textDecoration:"none",
       color:TextColor(),
+    },
+    settingThemes:{
+        backgroundColor:"black",
+        color:"white"
+    },
+    navIcon:{
+        backgroundColor:"black",
+        color:"white"
+    },
+    selectTheme:{
+        backgroundColor:"black",
+        color:"white",
+        border:"none",
+        background:"none",
+        fontSize:"12px",
+        padding:"0px",
+    },
+    selectThemeBlack:{
+        border:"none",
+        background:"none",
+        fontSize:"12px",
+        padding:"0px"
+    },
+    searchInput:{
+        borderRadius:"20px",
+        width:"100%",
+        padding:"10px 20px",
+        backgroundColor:'inherit',
+        color:TextColor()
     }
 
 }     

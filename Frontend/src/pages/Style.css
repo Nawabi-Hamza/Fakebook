@@ -1,0 +1,25 @@
+
+
+
+.home button:hover ,
+.profile button:hover {
+    background-color: rgb(209, 248, 229);
+    /* color: white !important; */
+    border: 1px solid black !important;
+    outline: 2px solid rgb(209, 248, 229);
+    outline-offset: 1px;
+}
+
+.home button:active,
+.profile button:active{
+    background-color: inherit !important;
+    color: inherit !important;
+    border: none !important;
+    outline: none !important;
+}
+
+textarea{
+    outline: none;
+    /* outline: 2px solid rgb(20, 42, 31);/ */
+
+}

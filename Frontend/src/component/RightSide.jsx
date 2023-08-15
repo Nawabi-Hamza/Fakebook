@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import "../App.css"
 // import "./rightSide.css";
 import Settings from './Settings';
@@ -7,12 +7,17 @@ import "./Style.css"
 
 export default function RightSide() {
     let num = 0;
+    const [ search,setSearch ] = useState("")
   return (
     <>
         <div className='right-side'  >
                 <span className='title' style={StyleSheet.title}>Your Friend</span> 
                     <div className='followers' style={StyleSheet.right}>
-                        {folower && folower.map((item)=>(
+                        <input type="text" onChange={(e)=>setSearch(e.target.value)} placeholder={`Find Your Friend`} style={StyleSheet.searchInput} />
+
+                        {folower && folower.filter((item)=>{
+                    return search.toLowerCase() === "" ? item : item.name.toLowerCase().includes(search.toLowerCase())
+                }).map((item)=>(
                             <div className='follow' style={StyleSheet.un_follow} key={num++}>
                                 <div className='left' style={StyleSheet.left}>
                                     
@@ -61,15 +66,15 @@ const folower = [
         image:"../image/wallpaperflare.com_wallpaper.jpg"
     },
     {
-        name:"Wahid",
+        name:"Ansar",
         image:"../image/wallpaperflare.com_wallpaper (4).jpg"
     },
     {
-        name:"Hamza",
+        name:"Khalid",
         image:"../image/wallpaperflare.com_wallpaper (3).jpg"
     },
     {
-        name:"Elyas",
+        name:"Aziz",
         image:"../image/wallpaperflare.com_wallpaper.jpg"
     }
 ]

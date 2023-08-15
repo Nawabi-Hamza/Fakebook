@@ -79,6 +79,9 @@ body{
   .home{
     width: 36% !important;
   }
+  .profile{
+    width: 36% !important;
+  }
   .right-side{
     width: 32% !important;
   }
@@ -118,6 +121,9 @@ body{
   .home{
     width: 45% !important;
   }
+  .profile{
+    width: 45% !important;
+  }
   .right-side{
     width: 40% !important;
   }
@@ -128,7 +134,9 @@ body{
   .home{
     width: 80% !important;
   }
-  
+  .profile{
+    width: 80% !important;
+  }
   .right-side{
     display: none;
   }
@@ -159,8 +167,11 @@ body{
 /* =====================850px all phones========================= */
 @media screen and (max-width:850px) {
   .home{
-    width: 95% !important;
+    width: 100% !important;
     margin-top: 60px !important;
+  }
+  .profile{
+    width: 100% !important;
   }
   .navIcons{
     position: fixed;
@@ -191,9 +202,12 @@ body{
   .home{
     width: 100% !important;
   }
-  .home .create-post{
-    height: 20vh !important;
-    overflow-y: hidden;
+  .profile{
+    width: 100% !important;
   }
+  /* .home .create-post{
+    height: auto !important;
+    overflow-y: hidden;
+  } */
   /* .navIcons . */
 }
