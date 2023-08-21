@@ -38,7 +38,6 @@ export default function Home() {
              <input type="file" class="form-control" style={StyleSheet.fileInput} onChange={handleChange} />
             <br />
                 <img src={file? file:null} style={StyleSheet.prevImage} alt=''/>
-            
             </>:null
             }
         </div>

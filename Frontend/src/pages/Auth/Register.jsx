@@ -13,7 +13,7 @@ export default function Register() {
                 <h3 style={RegisterStyleSheet.header1}>Register</h3>
                  <input type="text" className='sameBtn'  placeholder='Username' style={RegisterStyleSheet.input}/>
                  <input type="email" className='sameBtn'  placeholder='Email' style={RegisterStyleSheet.input}/>
-                 <input type="number" className='sameBtn' placeholder='Phone' style={RegisterStyleSheet.input}/>
+                 {/* <input type="number" className='sameBtn' placeholder='Phone' style={RegisterStyleSheet.input}/> */}
                  <input type="password" className='sameBtn' placeholder='Password' style={RegisterStyleSheet.input}/>
                  <input type="password" className='sameBtn' placeholder='ReType Password' style={RegisterStyleSheet.input}/>
                  <div className='recapcha' style={RegisterStyleSheet.recaptcha}>
