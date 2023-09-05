@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "../App.css"
+import "../../App.css"
 import { StyleSheet } from './StyleSheet'
 import { Link } from "react-router-dom"
 import "./Style.css"
@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div className='home' style={StyleSheet.home}>
         <div className="create-post" style={StyleSheet.createPost}>
-            <div style={StyleSheet.createPostHeader}>
+            <div className="create-post-fade" style={StyleSheet.createPostHeader}>
                 <h6>Create Your Post </h6> {showCreate? <div><button style={StyleSheet.postButton}>Post</button><button style={StyleSheet.postButton} onClick={handleShow}>Cancel</button></div>:<button style={StyleSheet.postButton} onClick={handleShow}>Create A Post</button>}
             </div>
             {showCreate?
@@ -70,6 +70,21 @@ export default function Home() {
                     <Link to="/post/2" style={StyleSheet.links}><button style={StyleSheet.button2}><i className="bi bi-send"></i> &nbsp; Comment</button></Link>
                 </div>
             </div>
+    
+        </div>
+        <div className="show-fake-posts">
+            <div className="single-post" >
+                <div className="img"></div>
+                <p ></p>
+                <div className="btnGroup" >
+                </div>
+            </div>
+            {/* <div className="single-post" >
+                <div className="img"></div>
+                <p ></p>
+                <div className="btnGroup" >
+                </div>
+            </div> */}
             
         </div>
     </div>

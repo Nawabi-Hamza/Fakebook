@@ -18,7 +18,28 @@ body{
     border: none !important;
     outline: none !important;
 }
+#registerBtn{
+    transition:.6s;
+}
+#registerBtn:hover
+{
+    background-color: black !important;
+    color: white !important;
+}
 
+.radioGroup i.bi{
+    margin: 0px 10px;
+    /* transform: scale(150%) ; */
+    /* accent-color:; */
+    font-size: 2rem;
+    /* color:black; */
+}
+
+
+.register-varify{
+    height: 100vh;
+
+}
 @media screen and (max-width:500px) {
         .login form{
             width:80vw !important;

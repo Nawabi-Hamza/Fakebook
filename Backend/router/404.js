@@ -5,4 +5,4 @@ const urlNotExist = (req,res)=>{
 }
 
 
-module.exports = urlNotExist
+module.exports = urlNotExist;

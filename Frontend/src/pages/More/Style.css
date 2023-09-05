@@ -1,0 +1,69 @@
+
+
+
+.home button:hover ,
+.profile button:hover {
+    background-color: rgb(209, 248, 229);
+    /* color: white !important; */
+    border: 1px solid black !important;
+    outline: 2px solid rgb(209, 248, 229);
+    outline-offset: 1px;
+}
+
+.home button:active,
+.profile button:active{
+    background-color: inherit !important;
+    color: inherit !important;
+    border: none !important;
+    outline: none !important;
+}
+
+textarea{
+    outline: none;
+    /* outline: 2px solid rgb(20, 42, 31);/ */
+
+}
+
+
+
+.show-fake-posts .single-post{
+    height: 400px;
+    margin: 50px auto;
+}
+.show-fake-posts .single-post .img{
+    height: 240px;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    animation: changeBackgroundColor 4s infinite;
+}
+.show-fake-posts .single-post p{
+    height: 120px;
+    width: 100%;
+    margin:5px auto;
+    animation: changeBackgroundColor 4s infinite;
+}
+.show-fake-posts .single-post .btnGroup{
+    height: 40px;
+    width: 100%;
+    border-radius: 0px 0px 20px 20px;
+    animation: changeBackgroundColor 4s infinite;
+
+}
+
+
+@keyframes changeBackgroundColor {
+    0% {
+      background-color: gray;
+      opacity: .2;
+    }
+    50% {
+      background-color: gray;
+      opacity: 1;
+
+    }
+    100% {
+      background-color: gray;
+      opacity: .2;
+
+    }
+  }

@@ -20,14 +20,14 @@ const urlNotFound = require("./router/404")
 
 
 // ================USES=================
-app.use("/api/authentication",authentication)
+app.use("/authentication",authentication)
 
 
 // if use any 
 app.use("*",urlNotFound)
 
 
-
+   
 // ==================SERVER RUNNIG================================
 app.listen(process.env.SERVER_PORT,()=>{
     console.log(`Server Is Running In ${process.env.SERVER_PORT}`)
